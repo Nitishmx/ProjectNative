@@ -10,9 +10,13 @@ import Delaware from './Delaware'
 import DiningHalls from './DiningHalls'
 import Details from './Details'
 import TapNavigation from './TapNavigation'
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs"
 const Stack=createNativeStackNavigator()
+const Tab=createBottomTabNavigator()
 const Route = () => {
   return (
+    <>
+
          <Stack.Navigator>
               <Stack.Screen name="ff" component={Welcome} options={{title:"",headerShown:false}}/>
               <Stack.Screen name="university" component={Home} options={{headerStyle:{
@@ -34,10 +38,24 @@ const Route = () => {
                 backgroundColor:"#009EEB"
               },headerTintColor:"white"}}/>
               <Stack.Screen name='Details' component={Details}/>
+              <Stack.Screen name='TabCreate' component={BottomTabNavigator}/>
+             
           </Stack.Navigator>
+          
+    </>
   )
 }
 
 export default Route
 
-const styles = StyleSheet.create({})
+
+const BottomTabNavigator = () => {
+    return (
+        <Tab.Navigator initialRouteName='Welcome' >
+
+            <Tab.Screen name="Welcome" component={Welcome} />
+
+
+        </Tab.Navigator>
+    );
+} 

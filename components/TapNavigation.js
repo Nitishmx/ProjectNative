@@ -7,8 +7,6 @@ const TapNavigation = () => {
   return (
     <Tap.Navigator>
       <Tap.Screen name="Home" component={DeliverOrder} />
-      <Tap.Screen name="Contact" component={DeliverOrder} />
-      <Tap.Screen name="Profile" component={DeliverOrder} />
     </Tap.Navigator>
   );
 };
