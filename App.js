@@ -3,12 +3,13 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import Route from './components/Route';
 import TapNavigation from './components/TapNavigation';
-
 const App = () => {
   return (
     <NavigationContainer>
       <Route />
     </NavigationContainer>
+ 
+
   );
 };
 

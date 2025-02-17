@@ -48,6 +48,7 @@ const Details = () => {
           />
         
           
+    
           
 
       </View>

@@ -1,9 +1,24 @@
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
+
 
 const Verification = () => {
   const navi=useNavigation()
+  function handler(){
+    navi.navigate("Home")
+    // navi.navigate("TabCreate")
+  }
+
+  // useEffect(()=>{
+  //   getEmail()
+  // },[])
+
+  // const getEmail = async () =>{
+  // let data = await getData('email');
+  // console.log('data',data);
+  // }
+
   return (
     <View backgroundColor="#009EEB">
      <View style={{height:"100%",width:"84%",margin:"auto",marginTop:80}}>
@@ -24,7 +39,7 @@ const Verification = () => {
        </View>
        </View>
        <TouchableHighlight>
-         <Text style={{backgroundColor:"white",height:60,borderRadius:4,textAlign:"center",textAlignVertical:"center",fontSize:20,fontWeight:600,marginTop:40}} onPress={()=>navi.navigate("home")}>Verify</Text>
+         <Text style={{backgroundColor:"white",height:60,borderRadius:4,textAlign:"center",textAlignVertical:"center",fontSize:20,fontWeight:600,marginTop:40}} onPress={handler}>Verify</Text>
        </TouchableHighlight>
        <Text style={{color:"white",textAlign:"center",marginTop:20,fontWeight:600,borderBottomColor:"white",borderBottomWidth:1}}>Resend Code</Text>
      </View>
